@@ -1,0 +1,91 @@
+<ion-header>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-img class="logoCentralizada" src="assets/imgs/LogoMonteSeuPC.png"></ion-img>
+  <ion-row class = "ion-align-items-center">
+    <ion-col size="6">
+      <ion-item>
+        <ion-input type="text" name="processador" [(ngModel)]="nomeProcessador" placeholder="Selecione uma Peça" readonly></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button href="/select-processador-grupo07" color="primary">
+        Selecionar <br> Processadores</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class = "ion-align-items-center">
+      <ion-col size="6">
+        <ion-item>
+          <ion-input type="text" name="placamae" [(ngModel)]="nomePlacaMae" placeholder="Selecione uma Peça" readonly></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button href="/select-placa-mae-grupo07" color="primary">
+          Selecionar <br> Placas-mãe</ion-button>
+      </ion-col>
+    </ion-row>
+
+  <ion-row class = "ion-align-items-center">
+    <ion-col size="6">
+      <ion-item>
+        <ion-input type="text" name="memoria" [(ngModel)]="nomeMemoria" placeholder="Selecione uma Peça" readonly></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button href="/select-memoria-ram-grupo07" color="primary">
+        Selecionar <br> Memórias Ram</ion-button>
+    </ion-col>
+  </ion-row>
+
+  
+
+  <ion-row class = "ion-align-items-center">
+    <ion-col size="6">
+      <ion-item>
+        <ion-input type="text" name="placadevideo" [(ngModel)]="nomePlacaDeVideo" placeholder="Selecione uma Peça" readonly></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button href="/select-placa-de-video-grupo07" color="primary">
+        Selecionar <br> Placas de Vídeo</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class = "ion-align-items-center">
+    <ion-col size="6">
+      <ion-item>
+        <ion-input type="text" name="armazenamento" [(ngModel)]="nomeArmazenamento" placeholder="Selecione uma Peça" readonly></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button href="/select-armazenamento-grupo07" color="primary">
+        Selecionar <br> Armazenamento</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class = "ion-align-items-center">
+    <ion-col size="6">
+      <ion-item>
+        <ion-input type="text" name="fonte" [(ngModel)]="nomeFonte" placeholder="Selecione uma Peça" readonly></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button href="/select-fonte-grupo07" color="primary">
+        Selecionar <br> Fontes</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class = "ion-align-items-center">
+    <ion-col size="6">
+      <ion-item>
+        <ion-input type="text" name="gabinete" [(ngModel)]="nomeGabinete" placeholder="Selecione uma Peça" readonly></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button href="/select-gabinete-grupo07" color="primary">
+        Selecionar <br> Gabinetes</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

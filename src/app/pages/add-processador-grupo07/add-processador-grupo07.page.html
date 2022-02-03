@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="processador-grupo07"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastrar Processador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-img [src]=""></ion-img>
+
+  <form (ngSubmit)="submitForm()">
+
+   <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="processador.nome" placeholder="Insira o nome do processador"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Foto</ion-label>
+      <ion-input type="text" name="cpf" [(ngModel)]="processador.foto" placeholder="Insira uma foto do processador"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Marca</ion-label>
+      <ion-select name="marca" [(ngModel)]="processador.marca">
+        <ion-select-option value="1">AMD</ion-select-option>
+        <ion-select-option value="2">Intel</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Soquete</ion-label>
+      <ion-select name="soquete" [(ngModel)]="processador.soquete">
+        <ion-select-option value="FCL">FCL</ion-select-option>
+        <ion-select-option value="AM4">AM4</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" color="primary">Salvar</ion-button>
+
+  </form> 
+
+</ion-content>

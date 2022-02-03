@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="principal"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Selecione Memória Ram</ion-title>
+  </ion-toolbar>
+  <ion-img class="logoCentralizada" src="assets/imgs/LogoMonteSeuPC.png"></ion-img>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let memoriaRam of memoriasRam">
+      <ion-item (click)="selecionarMemoriaRam(memoriaRam.id)" href="/principal" detail>
+        <ion-label>{{memoriaRam.nome}}</ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

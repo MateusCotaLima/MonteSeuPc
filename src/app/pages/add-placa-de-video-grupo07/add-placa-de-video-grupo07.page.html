@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="placa-de-video-grupo07"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastrar Placa de Vídeo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-img [src]=""></ion-img>
+
+  <form (ngSubmit)="submitForm()">
+
+   <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="placaDeVideo.nome" placeholder="Insira o nome do modelo."></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Foto</ion-label>
+      <ion-input type="text" name="foto" [(ngModel)]="placaDeVideo.foto" placeholder="Insira uma foto da placa de Vídeo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Marca</ion-label>
+      <ion-input type="text" name="marca" [(ngModel)]="placaDeVideo.marca" placeholder="Insira a marca da placa de Vídeo"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" color="primary">Salvar</ion-button>
+
+  </form> 
+
+</ion-content>

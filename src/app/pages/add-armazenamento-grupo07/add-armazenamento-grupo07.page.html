@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="armazenamento-grupo07"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastrar HDD/SSD</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-img [src]=""></ion-img>
+
+  <form (ngSubmit)="submitForm()">
+
+   <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="armazenamento.nome" placeholder="Insira o nome do modelo."></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Tipo</ion-label>
+      <ion-select name="tipo" [(ngModel)]="armazenamento.tipo">
+        <ion-select-option value="1">HDD</ion-select-option>
+        <ion-select-option value="2">SSD</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Foto</ion-label>
+      <ion-input type="text" name="foto" [(ngModel)]="armazenamento.foto" placeholder="Insira uma foto da peça"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Marca</ion-label>
+      <ion-input type="text" name="marca" [(ngModel)]="armazenamento.marca" placeholder="Insira uma foto da peça"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" color="primary">Salvar</ion-button>
+
+  </form> 
+
+</ion-content>

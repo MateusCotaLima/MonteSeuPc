@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Gerenciar Processadores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let processador of processadores">
+      <ion-item (click)="buscarPorId(processador.id)" [routerLink]="'/add-processador-grupo07/' + processador.id" detail>
+        <ion-label>{{processador.nome}}</ion-label>
+      </ion-item>
+      <ion-item-options side="start">
+        <ion-item-option color="danger" (click)="excluirProcessador(processador)">Excluir</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/add-processador-grupo07" color="primary">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

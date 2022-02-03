@@ -1,0 +1,28 @@
+<app-header titulo="Cadastro" rota="login" cor="danger"></app-header>
+
+<ion-content class="ion-padding">
+
+  <ion-text color="dark" class="ion-text-left">
+    <h6>Cadastro de Funcionario</h6>
+  </ion-text>
+
+  <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" formControlName="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+      <div class="erroValidacao">
+        <p *ngIf="formGroup.get('email').errors?.email">E-mail inválido</p>
+        <p *ngIf="formGroup.get('email').errors?.emailUnico">O e-mail já existe</p>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password" formControlName="senha"></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block" color="primary" [disabled]="!formGroup.valid">Cadastrar</ion-button>
+  </form>
+</ion-content>

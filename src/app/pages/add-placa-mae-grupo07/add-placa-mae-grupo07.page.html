@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="placa-mae-grupo07"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastrar Placa Mãe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-img [src]=""></ion-img>
+
+  <form (ngSubmit)="submitForm()">
+
+   <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="placaMae.nome" placeholder="Insira o nome do modelo."></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Foto</ion-label>
+      <ion-input type="text" name="foto" [(ngModel)]="placaMae.foto" placeholder="Insira uma foto da placa mãe"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Marca</ion-label>
+      <ion-input type="text" name="marca" [(ngModel)]="placaMae.marca" placeholder="Insira a marca da placa mãe"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Soquete</ion-label>
+      <ion-select name="soquete" [(ngModel)]="placaMae.soquete">
+        <ion-select-option value="FCL">FCL</ion-select-option>
+        <ion-select-option value="AM4">AM4</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Tipo da Memória</ion-label>
+      <ion-select name="tipoMemoria" [(ngModel)]="placaMae.tipoMemoria">
+        <ion-select-option value="DDR4">DDR4</ion-select-option>
+        <ion-select-option value="DDR3">DDR3</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+
+    <ion-item>
+      <ion-label position="floating">Slots de Memória</ion-label>
+      <ion-select name="slots" [(ngModel)]="placaMae.slots">
+        <ion-select-option value="1">2</ion-select-option>
+        <ion-select-option value="2">4</ion-select-option>
+        <ion-select-option value="3">8</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" color="primary">Salvar</ion-button>
+
+  </form> 
+
+</ion-content>

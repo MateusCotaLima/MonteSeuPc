@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="gabinete-grupo07"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastrar Gabinete</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-img [src]=""></ion-img>
+
+  <form (ngSubmit)="submitForm()">
+
+   <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="gabinete.nome" placeholder="Insira o nome do modelo."></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Foto</ion-label>
+      <ion-input type="text" name="foto" [(ngModel)]="gabinete.foto" placeholder="Insira uma foto da gabinete"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Marca</ion-label>
+      <ion-input type="text" name="marca" [(ngModel)]="gabinete.marca" placeholder="Insira a marca do gabinete"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" color="primary">Salvar</ion-button>
+
+  </form> 
+
+</ion-content>

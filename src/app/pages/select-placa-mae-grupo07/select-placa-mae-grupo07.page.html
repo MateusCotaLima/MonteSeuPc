@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="principal"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Selecione Placa Mãe</ion-title>
+  </ion-toolbar>
+  <ion-img class="logoCentralizada" src="assets/imgs/LogoMonteSeuPC.png"></ion-img>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let placaMae of placasMae">
+      <ion-item (click)="selecionarPlacaMae(placaMae.id)" href="/principal" detail>
+        <ion-label>{{placaMae.nome}}</ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
+

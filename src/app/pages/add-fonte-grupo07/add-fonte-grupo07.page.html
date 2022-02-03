@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="fonte-grupo07"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastrar Fonte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-img [src]=""></ion-img>
+
+  <form (ngSubmit)="submitForm()">
+
+   <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="fonte.nome" placeholder="Insira o nome do modelo."></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Foto</ion-label>
+      <ion-input type="text" name="foto" [(ngModel)]="fonte.foto" placeholder="Insira uma foto da fonte de alimentação"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Marca</ion-label>
+      <ion-input type="text" name="marca" [(ngModel)]="fonte.marca" placeholder="Insira a marca da fonte de alimentação"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Potência</ion-label>
+      <ion-input type="number" name="potencia" [(ngModel)]="fonte.potencia" placeholder="Insira o nome do modelo."></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" color="primary">Salvar</ion-button>
+
+  </form> 
+
+</ion-content>
