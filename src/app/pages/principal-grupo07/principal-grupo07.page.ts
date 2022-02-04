@@ -28,8 +28,11 @@ export class PrincipalGrupo07Page implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.escolhas = JSON.parse(localStorage.getItem('escolhas'));
-    if(this.escolhas.escolhaProcessador != null){
+    const aux = JSON.parse(localStorage.getItem('escolhas')) || this.escolhas;
+    this.escolhas = aux;
+
+    
+      if(this.escolhas.escolhaProcessador != null){
       this.nomeProcessador = this.escolhas.escolhaProcessador.nome;
     }
     if(this.escolhas.escolhaPlacaMae != null){
@@ -50,6 +53,8 @@ export class PrincipalGrupo07Page implements OnInit {
     if(this.escolhas.escolhaGabinete != null){
       this.nomeGabinete = this.escolhas.escolhaGabinete.nome;
     }
+    
+    
   }
 
 }
